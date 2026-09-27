@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Voice-Enabled Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <div class="brand">
+                <div class="logo">AI</div>
+                <div>
+                    <h1>AI Voice-Enabled Chatbot</h1>
+                    <p class="subtitle">Deep Learning + Speech Recognition</p>
+                </div>
+            </div>
+            <div class="status-pill" id="statusPill">
+                <span class="dot"></span><span id="statusText">Ready</span>
+            </div>
+        </header>
+
+        <main class="chat-card">
+            <div class="chat-window" id="chatWindow">
+                <div class="msg bot">
+                    <div class="bubble">
+                        Hi! I'm your AI college assistant. Click the microphone and ask a question,
+                        or type below. Try: <em>"What courses do you offer?"</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-panel" id="techPanel" hidden>
+                <div><span class="tech-label">Predicted Intent:</span> <span id="techIntent">-</span></div>
+                <div><span class="tech-label">Confidence:</span> <span id="techConfidence">-</span></div>
+                <div><span class="tech-label">Recognized Speech:</span> <span id="techSpeech">-</span></div>
+            </div>
+
+            <div class="composer">
+                <button id="micBtn" class="mic-btn" title="Start speaking" aria-label="Start speaking">
+                    <span class="mic-icon">🎤</span>
+                    <span class="mic-label" id="micLabel">Start Speaking</span>
+                </button>
+                <input
+                    id="textInput"
+                    type="text"
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                />
+                <button id="sendBtn" class="send-btn">Send</button>
+                <button id="ttsBtn" class="tts-btn" title="Replay last response" aria-label="Replay last response">🔊</button>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <span>Deep Learning intent classifier (BiLSTM) &middot; Web Speech API</span>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

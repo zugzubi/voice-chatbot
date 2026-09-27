@@ -1,0 +1,387 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Hi there",
+        "Hey there",
+        "Hello bot",
+        "Greetings",
+        "Howdy",
+        "Is anyone there",
+        "Hi, how are you"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there! What can I do for you?",
+        "Hey! Ask me anything about the college."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "See you",
+        "Talk to you later",
+        "Catch you later",
+        "I have to go",
+        "Bye bye",
+        "Good night",
+        "Farewell"
+      ],
+      "responses": [
+        "Goodbye! Have a great day.",
+        "See you later! Feel free to come back anytime.",
+        "Bye! Take care."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thanks a lot",
+        "Thank you so much",
+        "Appreciate it",
+        "That was helpful",
+        "Thanks for your help",
+        "Much appreciated",
+        "You are helpful",
+        "Great, thanks"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Glad I could help.",
+        "Anytime! Let me know if you need more information."
+      ]
+    },
+    {
+      "tag": "about_bot",
+      "patterns": [
+        "Who are you",
+        "What are you",
+        "What is your name",
+        "Tell me about yourself",
+        "Are you a bot",
+        "Are you human",
+        "What can you do",
+        "Introduce yourself",
+        "What is this",
+        "What is your purpose"
+      ],
+      "responses": [
+        "I am an AI voice-enabled chatbot built with a deep learning intent classification model to help you with college-related queries.",
+        "I'm a chatbot powered by a neural network. I can answer questions about courses, admissions, exams, fees, placements and more."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Help",
+        "I need help",
+        "Can you help me",
+        "Please help",
+        "I need assistance",
+        "Support",
+        "What can I ask",
+        "How do you work",
+        "Guide me",
+        "Show me options"
+      ],
+      "responses": [
+        "Sure! You can ask me about courses, admissions, fees, exams, attendance, placements, hostel, library, timings and contact details.",
+        "I can help with college-related information. Try asking about admissions, exams or placements."
+      ]
+    },
+    {
+      "tag": "college",
+      "patterns": [
+        "Tell me about the college",
+        "About the college",
+        "What is this college",
+        "College information",
+        "Give me college details",
+        "Describe the college",
+        "About your institution",
+        "Tell me about the institute",
+        "College overview",
+        "What kind of college is this"
+      ],
+      "responses": [
+        "Our college is a leading institution offering undergraduate and postgraduate programs in engineering, sciences and management, with a strong focus on research and industry collaboration."
+      ]
+    },
+    {
+      "tag": "courses",
+      "patterns": [
+        "What courses do you offer",
+        "List the courses",
+        "Which programs are available",
+        "Tell me about the courses",
+        "What can I study here",
+        "Available degrees",
+        "Undergraduate courses",
+        "Postgraduate courses",
+        "What branches are offered",
+        "Show me course list",
+        "Which streams are there",
+        "Degree programs"
+      ],
+      "responses": [
+        "We offer undergraduate programs (B.Tech, B.Sc, BBA, BCA) and postgraduate programs (M.Tech, M.Sc, MBA, MCA) across Computer Science, Electronics, Mechanical, Civil and Management streams."
+      ]
+    },
+    {
+      "tag": "admission",
+      "patterns": [
+        "How do I get admission",
+        "Admission process",
+        "How to apply",
+        "Admission requirements",
+        "What is the eligibility",
+        "How can I enroll",
+        "Application procedure",
+        "When do admissions open",
+        "Admission deadline",
+        "How to take admission",
+        "Entrance exam for admission",
+        "Admission criteria"
+      ],
+      "responses": [
+        "Admissions are based on entrance exam scores and merit. You can apply online through our official admissions portal during the application window, usually from May to July each year."
+      ]
+    },
+    {
+      "tag": "timetable",
+      "patterns": [
+        "Where can I find my timetable",
+        "Show my class schedule",
+        "Timetable",
+        "Class timings",
+        "Lecture schedule",
+        "When are my classes",
+        "How to see the timetable",
+        "Weekly schedule",
+        "Course schedule",
+        "Where is my timetable"
+      ],
+      "responses": [
+        "You can view your timetable on the student portal under the 'Academics' section. Timetables are updated every semester."
+      ]
+    },
+    {
+      "tag": "attendance",
+      "patterns": [
+        "How can I check my attendance",
+        "Where do I see attendance",
+        "Attendance details",
+        "My attendance record",
+        "How is attendance calculated",
+        "Minimum attendance required",
+        "Attendance percentage",
+        "How to view attendance",
+        "Attendance rules",
+        "Check attendance"
+      ],
+      "responses": [
+        "Your attendance is available on the student portal under the 'Attendance' tab. Students are required to maintain at least 75% attendance to be eligible for end-semester exams."
+      ]
+    },
+    {
+      "tag": "exams",
+      "patterns": [
+        "When are the exams",
+        "Exam schedule",
+        "When is the next exam",
+        "Exam dates",
+        "How are exams conducted",
+        "Semester exam",
+        "Mid-term exams",
+        "End-term exams",
+        "Exam pattern",
+        "Tell me about exams",
+        "Exam timetable"
+      ],
+      "responses": [
+        "Mid-semester exams are held in the middle of each semester and end-semester exams at the end. The detailed exam schedule is published on the exam portal a few weeks in advance."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "How much is the tuition",
+        "What are the fees",
+        "Fee structure",
+        "College fees",
+        "Tell me about the fees",
+        "How to pay the fees",
+        "Payment options",
+        "Fee payment portal",
+        "Annual fees",
+        "Is there any scholarship",
+        "Scholarship information",
+        "Fee refund policy"
+      ],
+      "responses": [
+        "The fee structure varies by program. Detailed fees and payment options are on the college website under 'Fee Structure'. Scholarships are available for merit and need-based candidates."
+      ]
+    },
+    {
+      "tag": "library",
+      "patterns": [
+        "Where is the library",
+        "Library timings",
+        "Library hours",
+        "Tell me about the library",
+        "Can I borrow books",
+        "How many books can I issue",
+        "Library rules",
+        "Online library",
+        "E-library",
+        "Digital library",
+        "Library facilities"
+      ],
+      "responses": [
+        "The central library is open from 8 AM to 10 PM on weekdays and 9 AM to 6 PM on weekends. Students can borrow up to 5 books at a time and also access the digital e-library remotely."
+      ]
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "Tell me about the hostel",
+        "Hostel facilities",
+        "Is there a hostel",
+        "Hostel fees",
+        "How to apply for hostel",
+        "Hostel rooms",
+        "Hostel accommodation",
+        "Boys hostel",
+        "Girls hostel",
+        "Hostel rules",
+        "Mess timings",
+        "Hostel wifi"
+      ],
+      "responses": [
+        "Separate hostels are available for boys and girls with Wi-Fi, mess, laundry and 24x7 security. You can apply for hostel accommodation through the student portal after admission."
+      ]
+    },
+    {
+      "tag": "placements",
+      "patterns": [
+        "Tell me about placements",
+        "How are the placements",
+        "Placement statistics",
+        "Highest package",
+        "Average package",
+        "Which companies visit",
+        "Placement record",
+        "Placement cell",
+        "Campus placements",
+        "Placement season",
+        "How is the placement rate"
+      ],
+      "responses": [
+        "Our placement cell has strong industry connections. Over 200 companies visit each year including top MNCs. The average package is around 8 LPA and the highest package last year was 42 LPA."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How can I contact you",
+        "Contact details",
+        "Phone number",
+        "Email address",
+        "How to reach the college",
+        "Contact the admin",
+        "Contact office",
+        "Reach out to you",
+        "Give me contact information",
+        "Helpline number"
+      ],
+      "responses": [
+        "You can contact the college at info@college.edu or call the admissions office at +91-11-1234-5678. The office is open Monday to Saturday, 9 AM to 5 PM."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where is the college located",
+        "College address",
+        "How to reach the college",
+        "College location",
+        "Where are you located",
+        "Directions to the college",
+        "Campus location",
+        "Where is your campus",
+        "Address of the college",
+        "How do I get there"
+      ],
+      "responses": [
+        "The college is located on Main Campus Road, Sector 21, New Delhi. It is well connected by metro and city buses, and you can find directions on the college website map."
+      ]
+    },
+    {
+      "tag": "working_hours",
+      "patterns": [
+        "What are your working hours",
+        "Office hours",
+        "When is the office open",
+        "College timings",
+        "Working days",
+        "Is the office open on Sunday",
+        "Office timings",
+        "When can I visit",
+        "What time do you open",
+        "What time do you close"
+      ],
+      "responses": [
+        "The college office is open Monday to Saturday from 9 AM to 5 PM. It remains closed on Sundays and public holidays."
+      ]
+    },
+    {
+      "tag": "technical_support",
+      "patterns": [
+        "The portal is not working",
+        "I can't login",
+        "Website is down",
+        "Technical issue",
+        "Need technical help",
+        "IT support",
+        "My account is locked",
+        "Forgot password",
+        "Reset password",
+        "Login error",
+        "Portal error",
+        "System not working"
+      ],
+      "responses": [
+        "For technical issues please email support@college.edu with your student ID and a screenshot. The IT helpdesk usually responds within one working day."
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "Random text",
+        "asdfgh",
+        "I don't know what to ask",
+        "Something else",
+        "This is confusing",
+        "You don't understand",
+        "That's not what I meant",
+        "Never mind"
+      ],
+      "responses": [
+        "I'm not completely sure I understood that. Could you please rephrase your question?",
+        "Sorry, I didn't quite get that. Could you ask it in a different way?"
+      ]
+    }
+  ]
+}
