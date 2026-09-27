@@ -83,6 +83,20 @@ def _load_artifacts() -> dict[str, Any]:
 ARTIFACTS = _load_artifacts()
 
 
+# Warm up the model so the first real /predict call is fast (avoids ~15s TF tracing lag).
+try:
+    _warm_seq = pad_sequences(
+        ARTIFACTS["tokenizer"].texts_to_sequences(["hello"]),
+        maxlen=int(ARTIFACTS["config"]["max_len"]),
+        padding="post",
+        truncating="post",
+    )
+    ARTIFACTS["model"](_warm_seq, training=False)
+    print("[app] Model warmup complete.")
+except Exception as _exc:  # noqa: BLE001
+    print(f"[app] Model warmup skipped: {_exc}")
+
+
 def predict_intent(message: str) -> dict[str, Any]:
     text = (message or "").lower().strip()
     tokenizer = ARTIFACTS["tokenizer"]
@@ -96,7 +110,8 @@ def predict_intent(message: str) -> dict[str, Any]:
 
     seq = tokenizer.texts_to_sequences([text])
     padded = pad_sequences(seq, maxlen=max_len, padding="post", truncating="post")
-    probs = model.predict(padded, verbose=0)[0]
+    # Direct __call__ avoids the Keras predict() per-batch overhead — noticeably faster on tiny inputs.
+    probs = np.asarray(model(padded, training=False))[0]
 
     idx = int(np.argmax(probs))
     confidence = float(probs[idx])
