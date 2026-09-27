@@ -1,0 +1,49 @@
+VOICE COMMANDS TO SAY INTO THE MIC
+==================================
+All 21 are trained. Aim to demo 6-8 during the assessment.
+
+ #   What you say                              Predicted intent
+---  ---------------------------------------   -------------------
+ 1   Hello                                     greeting
+ 2   Hi there, good morning                    greeting
+ 3   Who are you? What can you do?             about_bot
+ 4   What courses do you offer?                courses
+ 5   Tell me about the undergraduate programs  courses
+ 6   How do I get admission?                   admission
+ 7   What is the admission process?            admission
+ 8   When are the exams?                       exams
+ 9   Tell me about the exam pattern            exams
+10   How can I check my attendance?            attendance
+11   What is the fee structure?                fees
+12   Tell me about placements                  placements
+13   What is the average package?              placements
+14   Where is the library?                     library
+15   Tell me about the hostel facilities       hostel
+16   How can I contact the college?            contact
+17   Where is the college located?             location
+18   What are your working hours?              working_hours
+19   The portal is not working                 technical_support
+20   Thank you so much                         thanks
+21   Goodbye                                   goodbye
+
+
+SHOW THE FALLBACK PATH (proves the confidence threshold works)
+--------------------------------------------------------------
+Try one intentionally weird query:
+- Can you order me a pizza?
+- What is the meaning of life?
+- sdkjfhsdkjfh
+
+The bot should reply:
+  "I'm not completely sure I understood that.
+   Could you please rephrase your question?"
+
+and the technical panel will show LOW confidence.
+Point this out — it proves the softmax + threshold logic.
+
+
+TEXT-INPUT BACKUP
+-----------------
+If the mic misbehaves in front of the teacher, don't panic —
+type the same queries into the text box. Both paths hit the
+same neural network.

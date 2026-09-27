@@ -1,0 +1,26 @@
+VOICE-ENABLED CHATBOT — POTENTIAL TEACHER QUESTIONS AND ANSWERS
+================================================================
+
+Q: Is this ChatGPT?
+A: No — this is a custom BiLSTM trained on my own dataset in intents.json.
+   It has no LLM API dependency.
+
+Q: Why LSTM instead of a Transformer?
+A: For 19 intents and ~180 patterns, a BiLSTM is the right size — a
+   Transformer would overfit and wouldn't fit in the 512 MB deployment
+   memory. Transformers would be Future Scope.
+
+Q: Why 50% confidence threshold?
+A: Empirical — high enough to reject noise, low enough that valid
+   rephrasings still pass. Tunable in models/config.pkl.
+
+Q: What is the dataset size?
+A: 19 intents, ~180 hand-written patterns, split 70/15/15 stratified.
+
+Q: How do you handle out-of-vocab words?
+A: The Keras tokenizer uses an <OOV> token that maps unknown words to a
+   single embedding index.
+
+Q: Can it learn new intents?
+A: Yes — add a new tag to intents.json, rerun train.py, redeploy.
+   The retraining takes ~1 minute.
